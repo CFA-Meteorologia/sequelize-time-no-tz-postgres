@@ -8,9 +8,9 @@ function withParentTimeNoTz(DataTypesOrSequelize) {
   const DataTypes = getDataTypes(DataTypesOrSequelize);
   const Sequelize = getSequelize(DataTypesOrSequelize);
 
-  function TIME_NO_TZ() {
+  function TIME_NO_TZ(options) {
     if (!(this instanceof TIME_NO_TZ)) return new TIME_NO_TZ(options);
-  };
+  }
   inherits(TIME_NO_TZ, DataTypes.ABSTRACT);
 
   TIME_NO_TZ.key = 'TIME_NO_TZ';

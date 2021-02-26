@@ -1,7 +1,8 @@
 {
-  "name": "sequelize-time-no-tz-postgres",
+  "name": "sequelize-time-no-tz-postgres-hoc",
   "version": "1.0.0",
   "description": "Add support for TIME-NO-TZ data-type for PostgreSQL in Sequelize",
+  "private": false,
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
