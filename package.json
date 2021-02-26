@@ -1,6 +1,6 @@
 {
   "name": "sequelize-time-no-tz-postgres-hoc",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Add support for TIME-NO-TZ data-type for PostgreSQL in Sequelize",
   "private": false,
   "main": "src/index.js",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/abelosorio/sequelize-time-no-tz-postgres#readme",
   "dependencies": {
     "lodash": "^4.17.10",
+    "moment": "^2.29.1",
     "util": "^0.11.0"
   }
 }

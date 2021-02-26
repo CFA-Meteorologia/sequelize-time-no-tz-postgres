@@ -3,6 +3,7 @@
 const inherits = require('./utils').inherits;
 const getDataTypes = require('./utils').getDataTypes;
 const getSequelize = require('./utils').getSequelize;
+const moment = require('moment');
 
 function withParentTimeNoTz(DataTypesOrSequelize) {
   const DataTypes = getDataTypes(DataTypesOrSequelize);
@@ -15,8 +16,13 @@ function withParentTimeNoTz(DataTypesOrSequelize) {
 
   TIME_NO_TZ.key = 'TIME_NO_TZ';
   TIME_NO_TZ.prototype.toSql = function () {
-    return 'TIME';
+    return 'TIMESTAMP';
   };
+
+  TIME_NO_TZ.prototype.stringify = function (value, options) {
+    const date = moment(value)
+    return date.format('YYYY-MM-DD HH:mm:ss.SSS');
+  }
 
   DataTypes.TIME_NO_TZ = TIME_NO_TZ;
 
